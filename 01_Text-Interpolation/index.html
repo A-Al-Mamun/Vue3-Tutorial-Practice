@@ -14,7 +14,8 @@
     <header><h1>Vue 3 js Tutorial Practice</h1></header>
     <div id="app">
 
-        <img v-bind:src="vueLogo" alt="">
+        <!-- Short form v-bind -->
+        <img :src="vueLogo" alt="">
         <h1>Welcome to {{ text }}</h1>
         <p>My name is {{ user.name[0] }}, and email : {{ user.email[0]}} <br>Call me : {{ user.phone[0] }}</p>
 

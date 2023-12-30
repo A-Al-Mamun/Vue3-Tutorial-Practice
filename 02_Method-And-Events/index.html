@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method And Event Practice | Vue 3 Tutorial Practice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN Link -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <header><h1>Vue 3 Tutorial Practice</h1></header>
+    <div id="app">
+        <span><b>Current Time</b> :{{ getTime() }}</span><br><br>
+        
+        <h1>Counter: {{ count }}</h1>
+        <button v-on:click="getIncrement()" class="inc">Increment</button>
+
+        <!-- Here short form of event directive -->
+        <button @click="getDecrement()" class="dec">Decrement</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
