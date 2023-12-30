@@ -20,6 +20,22 @@ const app = Vue.createApp({
                 this.count--;
             }
         },
+
+        // With parameter of function worked
+        getInc10(evt,amount){
+            this.count = this.count + amount;
+            console.log(evt)
+        },
+        getDec10(amount){
+            if(this.count <= 0){
+                alert("Enough Decrement");
+            }else{
+                this.count = this.count - amount;
+            }
+        },
+        test(ev){
+            console.log(ev);
+        }
     }
 });
 

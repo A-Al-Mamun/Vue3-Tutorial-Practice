@@ -14,12 +14,18 @@
     <header><h1>Vue 3 Tutorial Practice</h1></header>
     <div id="app">
         <span><b>Current Time</b> :{{ getTime() }}</span><br><br>
-        
+
         <h1>Counter: {{ count }}</h1>
-        <button v-on:click="getIncrement()" class="inc">Increment</button>
+        <button v-on:click="getIncrement()" class="inc">Increment 1</button>
 
         <!-- Here short form of event directive -->
-        <button @click="getDecrement()" class="dec">Decrement</button>
+        <button @click="getDecrement()" class="dec">Decrement 1</button> <br>
+        <button @click="getInc10($event,10)" class="inc">Increment 10</button>
+        <button @click="getDec10(10)" class="dec">Decrement 10</button>
+        <br>
+        <hr>
+        <br>
+        <button @click="test($event)" class="test">Test</button>
     </div>
     <script src="./app.js"></script>
 </body>
