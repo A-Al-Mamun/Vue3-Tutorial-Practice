@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Binding| Vue 3 Tutorial Practice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN Link -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <header><h1>Vue 3 Tutorial Practice</h1><h3>Vue v3 Binding</h3></header>
+    <div id="app">
+
+        <h1>Class Binding Practice</h1>
+        <button :class="{active: activeClass == 'red'}" @click="setClass('red')">Red</button>
+        <button :class="{active: activeClass == 'green'}" @click="setClass('green')">Green</button>
+        <button :class="{active: activeClass == 'blue'}" @click="setClass('blue')">Blue</button><br>
+
+        <!-- It just Attribute binding -->
+        <!-- <button @click="setClass('red')">Red</button>
+        <button @click="setClass('green')">Green</button>
+        <button @click="setClass('blue')">Blue</button><br> -->
+
+        <div :class="activeClass"></div>
+
+        <br><br><hr><br><br>
+        <h1>Style Binding Practice</h1><br>
+        <label>Text Color :</label><input v-model="textColor" type="text"><br>
+        <label>BG Color :</label><input v-model="bgColor" type="text" /><br>
+        <label>BG Color :</label><input v-model="bgColor" type="color" /><br>
+
+        <!-- <div class="card" :style="'background-color:' + bgColor"></div> -->
+        <div class="card" :style="{backgroundColor: bgColor, color: textColor}">This is the Card Div</div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
