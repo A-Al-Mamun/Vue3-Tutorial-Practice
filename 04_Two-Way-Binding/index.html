@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two way Binding| Vue 3 Tutorial Practice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN Link -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <header><h1>Vue 3 Tutorial Practice</h1><h3>Two Way Bind</h3></header>
+    <div id="app">
+        <h2>Enter The Number</h2>
+        <!-- <input :value="num" @input="getNumber" type="text" placeholder="Enter Number"><br> -->
+        <input v-model.number="num" type="text" placeholder="Enter Number"><br>    <!-- We don't need event method, when using v-model for two way binding. Here We also using the number modifier-->
+
+        <button @click="getDouble">Get Double</button>
+        <button @click="getSquare">Get Square</button>
+        <button @click="getAddTen">Get Add 10</button>
+        <button @click="getReset">Reset</button>
+        <br><hr><br>    
+
+        <label for="#">Get Input: </label>{{ num }}<br>
+        <label for="#">Get Result: </label>{{ result }}<br>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
