@@ -13,9 +13,17 @@
 <body>
     <header><h1>Vue 3 Tutorial Practice</h1></header>
     <div id="app">
-        <h3>Enter Your Name</h3>
-        <input type="text" @keyup="handleKeyup" >
-        <p>Welcome</p>
+        <form @submit.prevent="handleSubmitHere">
+            <h3>Enter Your Name</h3>
+            <input type="text" @keyup="handleKeyup" ><button type="submit">OK</button>
+            <p>Welcome {{ name }}</p>
+        </form>
+        <hr>
+        <br>
+        <div class="view" @click="handleViewClick">
+            <button @click.stop="handleClick">Click</button>
+            <!-- <input type="text" @click.stop="handleClick" v-model="name"> -->
+        </div>
     </div>
     <script src="./app.js"></script>
 </body>
