@@ -2,16 +2,34 @@ let app = Vue.createApp({
     data(){
         return{
             activeMenu: "Receptionist",
-            inputValue: "",
+            inputName: "",
+            inputPhone: "",
+            inputPass: "",
+            rCheck: "",
+
+            db: {
+                user: ["recep", "admin", "doctor"],
+                pass: ["recep", "admin", "doctor"]
+            }
         }
     },
     methods: {
         setMenu(setClass){
             this.activeMenu = setClass;
         },
-        inValue(setValue){
-            this.inputValue = setValue.target.value;
-        }
+        inName(setName){
+            this.inputName = setName.target.value;  
+        },
+        inPhone(setPhone){
+            this.inputPhone = setPhone.target.value;  
+        },
+        resultCheck(){
+            if(this.inputPass.target.value == this.db.user[0]){
+                this.rCheck = "Correct";
+            }else{
+                this.rCheck = "Incorrect";
+            }
+        },
     }
 });
 
