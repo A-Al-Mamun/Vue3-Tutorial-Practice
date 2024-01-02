@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 Simple Project | Created by A-Al-Mamun</title>
+
+    <!-- Style Css Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN link -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <a href="#" :class="{active: activeMenu == 'Receptionist'}" @click="setMenu('Receptionist')">Receptionist</a>
+            <a href="#" :class="{active: activeMenu == 'Administration'}" @click="setMenu('Administration')">Administrator</a>
+            <a href="#" :class="{active: activeMenu == 'Doctor'}" @click="setMenu('Doctor')">Doctor</a>
+        </header>
+
+        <br><br><hr><br><br>
+
+        <h1>Login Form App</h1>
+        <div :class="activeMenu" class="log-form">
+            <form action="">
+                <label>{{activeMenu}} User Name : </label><input type="text" @input="inValue"><br>
+                <label>{{activeMenu}} Phone Num. : </label><input type="text"><br>
+                <label>{{activeMenu}} Password : </label><input type="text"><br>
+            </form>
+        </div>
+        <br><hr><br>
+        <div class="review">
+            <label>{{activeMenu}} User Name : </label>{{ inputValue }}<br>
+            <label>{{activeMenu}} User Name : </label>{{ inputValue }}<br>
+            <label>{{activeMenu}} Result : </label>{{ inputValue }}
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
