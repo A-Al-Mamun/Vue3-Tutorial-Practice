@@ -24,7 +24,7 @@ header a{
     font-weight: 600;
     border: 2px solid red;
 }
-
+  
 .log-form form {
     display: flex;
     flex-direction: column;

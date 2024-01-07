@@ -26,15 +26,14 @@
             <form>
                 <label>{{activeMenu}} User Name : </label><input type="text" @input="inName"><br>
                 <label>{{activeMenu}} Phone Num. : </label><input type="text" @input="inPhone"><br>
-                <label>{{activeMenu}} Password : </label><input type="text"
-                @input="resultCheck" v-model="inputPass"><br>
+                <label>{{activeMenu}} Password : </label><input type="text" @input="inPass"><br>
             </form>
         </div>
         <br><hr><br>
         <div class="review">
             <label>{{activeMenu}} User Name : </label>{{ inputName }}<br>
             <label>{{activeMenu}} Phone Num. : </label>{{ inputPhone }}<br>
-            <label>{{activeMenu}} Result : </label>{{ rCheck }}
+            <label>{{activeMenu}} Result : </label>{{ resultCheck() }}
         </div>
     </div>
     <script src="app.js"></script>

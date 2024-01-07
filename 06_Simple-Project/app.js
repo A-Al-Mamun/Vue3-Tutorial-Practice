@@ -23,11 +23,14 @@ let app = Vue.createApp({
         inPhone(setPhone){
             this.inputPhone = setPhone.target.value;  
         },
+        inPass(setPass){
+            this.inputPass = setPass.target.value;  
+        },
         resultCheck(){
-            if(this.inputPass.target.value == this.db.user[0]){
-                this.rCheck = "Correct";
+            if(this.inputPass == this.db.user[0]){
+                return "Correct";
             }else{
-                this.rCheck = "Incorrect";
+                return "Incorrect";
             }
         },
     }
