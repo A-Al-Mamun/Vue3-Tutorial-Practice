@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+[v-cloak]{
+    display: none;
+}
+
+#app{
+    text-align: center;
+}
+
+input{
+    padding: 5px;
+    margin: 10px auto;
+    display: block;
+}
+
+button{
+    padding: 10px 20px;
+}

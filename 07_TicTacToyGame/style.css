@@ -18,6 +18,12 @@ body{
     top: 10px;
     width: 100%;
 }
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
 
 .game-body{
     width: 100%;
