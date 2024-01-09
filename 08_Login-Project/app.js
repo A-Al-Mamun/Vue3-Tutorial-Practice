@@ -49,7 +49,8 @@ app.component("custom-input", {
                 return this.modelValue;
             },
             set(value) {
-                console.log(value)
+                // console.log(value);
+                this.$emit('update:modelValue', value)
             }
         }
     }
