@@ -1,18 +1,18 @@
 let app = Vue.createApp({
     data(){
         return{
-            red: "red",
-            green: "green",
+            boxValue: "",
+            turn: true,
         }
     },
     methods: {
-        getClick(){
-            let body = document.querySelectorAll(".item");
-            body.forEach(item => {
-                item.addEventListener("click", () => {
-                    console.log(body)
-                })
-            })
+        setValue(){
+            if(this.turn){
+                this.boxValue = "X";
+                this.turn = false;
+            }else{
+                this.boxValue = 'O';
+            }
         }
     }
 });

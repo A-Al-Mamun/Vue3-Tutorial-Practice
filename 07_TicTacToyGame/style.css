@@ -6,40 +6,28 @@
 [v-cloak]{
     display: none;
 }
-body{
-    position: relative;
-}
+
 #app{
     text-align: center;
 }
 
 #app h1{
-    position: absolute;
-    top: 10px;
-    width: 100%;
-}
-.red{
-    background: red;
-}
-.green{
-    background: green;
+    
 }
 
-.game-body{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+.container{
+    margin: 20px auto;
 }
-.item{
-    /* width: 100%;
-    height: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: yellow;
+.game{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background: rebeccapurple;
+    font-size: 2rem;
+    color: #fff;
 }
 
