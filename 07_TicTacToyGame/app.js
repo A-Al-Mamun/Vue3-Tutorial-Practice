@@ -12,25 +12,29 @@ let app = Vue.createApp({
                 [2,4,6],
                 [3,4,5],
                 [6,7,8],
-            ]
+            ],
+            classBox: 'box',
+            
         }
     },
     methods: {
+
         setValue(){
             let boxes = document.querySelectorAll('.box');
+            console.log(boxes);
             boxes.forEach(item => {
-                item.addEventListener('click', () => {
-                    if(this.turn){
-                        this.boxValue = "X";
-                        this.turn = false;
-                    }else{
-                        this.boxValue = 'O';
-                    }
-                })
+                if(!this.turn){
+                    item = "O";
+                    this.boxValue = item;
+                    this.turn = true;
+                }else{
+                    this.boxValue = 'X';
+                    this.turn = false;
+                }
             })
-
             
         }
+
     }
 });
 

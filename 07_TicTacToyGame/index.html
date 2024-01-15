@@ -15,16 +15,16 @@
     <div id="app" v-cloak>
         <div class="container">
             <h1>Tic Tac Toy Game</h1>
-            <div class="game">
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
-                <button class="box" @click="setValue">{{ boxValue }}</button>
+            <div class="game" >
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
+                <button :class="classBox" @click="setValue">{{ boxValue }}</button>
             </div>
         </div>
     </div>
