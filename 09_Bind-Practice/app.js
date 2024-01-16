@@ -3,17 +3,17 @@ let app = Vue.createApp({
         return{
             boxValue: "",
             inTurm: null,
-            classBox: 'box',
+            // classBox: 'box',
             boxes: [
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
-                {item: 'O', sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
+                {sel: false},
             ]
         }
     },

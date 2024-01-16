@@ -15,8 +15,8 @@
     <div id="app" v-cloak>
         <div class="container">
             <h1>Tic Tac Toy Game</h1>
-            <div class="game" v-for="(item, index) in boxes" >
-                <button :class="classBox" @click="setValue(index)">{{ boxValue }}</button>
+            <div class="game">
+                <button class="box" v-for="(item, index) in boxes" :class="{border: item.sel}" @click="setValue(index)">{{ boxValue }}</button>
             </div>
         </div>
     </div>
