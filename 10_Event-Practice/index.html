@@ -13,9 +13,12 @@
 <body>
     <div id="app">
         <h1>{{ foodName }} Listed</h1>
+        
         <div>
-            <span v-for="item in foods" @click="singleImage= item.url ">{{ item.name }}</span>
-            <img :src="singleImage" alt="">
+            <span v-for="item in foods" @click="singleImage= item.url">{{ item.name }} </span>
+            
+            <span><br><br>Position <br> X : {{ xPos }} <br> Y : {{ yPos }}</span>
+            <img :src="singleImage" @mouseover="imagePos" alt="">
         </div>
     </div>
 
