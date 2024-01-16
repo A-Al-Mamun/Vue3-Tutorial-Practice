@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app{
+    text-align: center;
+}
+#app h1{
+    /* text-align: center; */
+}
+
+#app>div{
+    display: flex;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 Event Practice | Create By A-Al-Mamun</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN Link -->
+    <script src="http://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ foodName }} Listed</h1>
+        <div>
+            <span v-for="item in foods" @click="singleImage= item.url ">{{ item.name }}</span>
+            <img :src="singleImage" alt="">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
