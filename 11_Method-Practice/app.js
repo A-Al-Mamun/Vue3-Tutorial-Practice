@@ -9,11 +9,15 @@
                 {name: "Fast Food", url: "img/fast-food.svg"},
                 {name: "Fruits", url: "img/fruit-basket.svg"},
             ],
-            
+            xPos: 0,
+            yPos: 0,
         }
     },
     methods: {
-        
+        imagePos(event){
+            this.xPos = event.offsetX;
+            this.yPos = event.offsetY;
+        }
     }
 });
 

@@ -17,7 +17,8 @@
         <div>
             <span v-for="item in foods" @click="singleImage= item.url">{{ item.name }} </span>
             
-            <img :src="singleImage" alt="">
+            <span><br><br>Position <br> X : {{ xPos }} <br> Y : {{ yPos }}</span>
+            <img :src="singleImage" @mouseover="imagePos" alt="">
         </div>
     </div>
 
