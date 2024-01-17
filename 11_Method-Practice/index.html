@@ -14,13 +14,24 @@
     <div id="app">
         <h1>{{ foodName }} Listed</h1>
         
-        <div>
+        <div class="food-list">
             <span v-for="item in foods" @click="singleImage= item.url">{{ item.name }} </span>
             
             <span><br><br>Position <br> X : {{ xPos }} <br> Y : {{ yPos }}</span>
             <div class="image" :style="{backgroundColor: 'rgba(' + xPos +',1,0,1)'}">
                 <label>X Pos :</label><input type="range" @input="bgColor" min="0" max="300">
                 <img :src="singleImage" @mouseover="imagePos" alt=""> 
+            </div>
+        </div>
+        
+        <div class="food-count">
+            <p>How many pizza do you want eat right now?</p>
+            <span>Pizza :{{ count }}</span>
+            <div class="btn">
+                <button @click="addCount(1)">+1</button>
+                <button @click="addCount(2)">+2</button>
+                <button @click="addCount(5)">+5</button>
+                <button @click="addCount(-1)">-1</button>
             </div>
         </div>
     </div>

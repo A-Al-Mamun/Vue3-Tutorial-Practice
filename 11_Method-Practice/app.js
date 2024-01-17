@@ -11,6 +11,8 @@
             ],
             xPos: 0,
             yPos: 0,
+
+            count: 0,
         }
     },
     methods: {
@@ -20,6 +22,9 @@
         },
         bgColor(e){
             this.xPos = e.target.value;
+        },
+        addCount(number){
+            this.count = this.count + number;
         }
     }
 });
