@@ -17,6 +17,9 @@
         imagePos(event){
             this.xPos = event.offsetX;
             this.yPos = event.offsetY;
+        },
+        bgColor(e){
+            this.xPos = e.target.value;
         }
     }
 });
