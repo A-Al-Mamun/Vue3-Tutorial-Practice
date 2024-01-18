@@ -54,3 +54,16 @@ label{
     padding: 10px 15px;
     font-size: 1.5rem;
 }
+
+.animal{
+    flex-direction: column;
+    align-items: center;
+}
+.animal button{
+    background: rebeccapurple;
+    padding: 5px;
+    border: 0;
+    margin-right: 5px;
+    border-radius: 3px;
+    color: #fff;
+}

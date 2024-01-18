@@ -34,6 +34,21 @@
                 <button @click="addCount(-1)">-1</button>
             </div>
         </div>
+
+        <br><br><hr><br>
+
+        <div class="animal">
+            <h1>Animal Section for multiple option</h1>
+            <ul>
+                <li id="tiger">Tiger count: {{ tiger }} <button @click="animalCount($event,1)">+1</button><button @click="animalCount($event,-1)">-1</button></li>
+
+                <li id="lion">Lion count: {{ lion }} <button @click="animalCount($event,1)">+1</button><button @click="animalCount($event,-1)">-1</button></li>
+
+                <li id="elephant">Elephant count: {{ elephant }} <button @click="animalCount($event,1)">+1</button><button @click="animalCount($event,-1)">-1</button></li>
+                
+                <li id="hayna">Hayna count: {{ hayna }} <button @click="animalCount($event,1)">+1</button><button @click="animalCount($event,-1)">-1</button></li>
+            </ul>
+        </div>
     </div>
 
     <script src="app.js"></script>

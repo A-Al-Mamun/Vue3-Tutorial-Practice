@@ -13,6 +13,11 @@
             yPos: 0,
 
             count: 0,
+
+            tiger: 0,
+            lion: 0,
+            elephant: 0,
+            hayna: 0,
         }
     },
     methods: {
@@ -25,6 +30,18 @@
         },
         addCount(number){
             this.count = this.count + number;
+        },
+        animalCount(e,num){
+            if(e.target.parentElement.id === "tiger"){
+                this.tiger += num;
+            }else if(e.target.parentElement.id === "lion"){
+                this.lion += num;
+            }else if(e.target.parentElement.id === "elephant"){
+                this.elephant += num;
+            }else{
+                this.hayna += num;
+            }
+        
         }
     }
 });
