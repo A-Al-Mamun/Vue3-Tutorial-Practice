@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 Form Practice | Create By A-Al-Mamun</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN Link -->
+    <script src="http://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Form for Add item</h1>
+        <form v-on:submit.prevent="addItem">
+            <h1>Add item</h1>
+            <h2>Add Name: <input type="text" v-model="itemName" required></h2>
+            <h2>How Many: <input type="number" v-model="itemNumber" required></h2>
+            <button type="submit">Add</button>
+        </form>
+        <div>
+            <ul>
+                <li v-for="item in itemList">We have {{item.number}} {{ item.name}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
