@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+[v-cloak]{
+    display: none;
+}
+
+#app{
+    text-align: center;
+}
+
+#app form{
+    margin: 50px auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+input,
+label,
+select,
+button{
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+

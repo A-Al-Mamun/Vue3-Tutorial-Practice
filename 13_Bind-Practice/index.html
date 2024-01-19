@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 v-Binding Practice | Created by A-Al-Mamun</title>
+
+    <!-- Style Css Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN link -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <form v-on:submit.prevent="showInfo">
+            <input type="text" placeholder="Enter Name">
+            <input type="email" placeholder="Enter Email">
+            <input type="number" placeholder="Enter Phone Number">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="option" selected>Option</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <hr>
+        <div class="show">
+            <h1 v-for="item in infoStore">{{ item.lname}}</h1>
+            <h1 v-for="item in infoStore">{{ item.lemail}} </h1>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
