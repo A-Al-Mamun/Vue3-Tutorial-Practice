@@ -3,8 +3,13 @@
         return {
             itemName: null,
             itemNumber: null,
+            itemImportant:false,
             itemList: [
-                {name: "Apple", number: 5}
+                {
+                    name: "Apple", 
+                    number: 5, 
+                    important: false
+                }
             ]
         }
     },
@@ -12,11 +17,13 @@
         addItem(){
             let item = {
                 name: this.itemName,
-                number: this.itemNumber
+                number: this.itemNumber,
+                important: this.itemImportant
             };
             this.itemList.push(item);
             this.itemName = null;
             this.itemNumber = null;
+            this.itemImportant = false;
         }
     }
 });

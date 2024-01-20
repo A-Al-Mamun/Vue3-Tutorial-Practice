@@ -17,11 +17,12 @@
             <h1>Add item</h1>
             <h2>Add Name: <input type="text" v-model="itemName" required></h2>
             <h2>How Many: <input type="number" v-model="itemNumber" required></h2>
+            <h2>Important? : <input type="checkbox" v-model="itemImportant" required></h2>
             <button type="submit">Add</button>
         </form>
         <div>
             <ul>
-                <li v-for="item in itemList">We have {{item.number}} {{ item.name}}</li>
+                <li v-for="item in itemList">We have {{item.number}} {{ item.name}}, this is {{item.important}}</li>
             </ul>
         </div>
     </div>
