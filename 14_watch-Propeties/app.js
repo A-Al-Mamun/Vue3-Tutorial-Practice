@@ -6,7 +6,9 @@
             checkText: '',
             emailLabel: 'Email ',
             passLabel: 'Password ',
-            msg: "Special Character add '@ # $ &'"
+            msg: "Special Character Add '@ # $ &'",
+            msg1: "Add ''",
+            myClass: 'inValid'
         }
     },
     watch: {
@@ -14,13 +16,17 @@
             if(!newVal.includes('@') && !newVal.includes('#') && !newVal.includes('$') && !newVal.includes('&')){
                 this.checkText = this.msg;
             }else if(!oldVal.includes('@') && newVal.includes('@')){
-                this.checkText = "Perfectly add '@'";
+                this.checkText = "Add '@'";
+                this.myClass = 'valid';
             }else if(!oldVal.includes('#') && newVal.includes('#')){
-                this.checkText = "Perfectly add '#'";
+                this.checkText = "Add '#'";
+                this.myClass = 'valid';
             }else if(!oldVal.includes('$') && newVal.includes('$')){
-                this.checkText = "Perfectly add '$'";
+                this.checkText = "Add '$'";
+                this.myClass = 'valid';
             }else if(!oldVal.includes('&') && newVal.includes('&')){
-                this.checkText = "Perfectly add '&'";
+                this.checkText = "Add '&'";
+                this.myClass = 'valid';
             }else {
                 this.checkText = "Done the requirement";
             }

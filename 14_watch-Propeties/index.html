@@ -19,7 +19,7 @@
                 <div class="inputLabel"><h2>{{ emailLabel }}</h2><h2>{{ passLabel }}</h2></div>
                 <div><h2>:</h2><h2>:</h2></div>
                 <div class="inputField"><input type="text" v-model="email" required><br><input type="password" v-model="passwordCheck" required><br>
-                <span>{{ checkText }}</span></div>
+                <span :class="myClass">{{ checkText }}</span></div>
             </div>
             <button type="submit">Login</button>
         </form>

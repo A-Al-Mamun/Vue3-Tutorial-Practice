@@ -39,3 +39,10 @@ body{
     padding: 10px;
     text-transform: uppercase;
 }
+
+.inValid{
+    color: red;
+}
+.valid{
+    color: green;
+}
