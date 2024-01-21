@@ -14,21 +14,22 @@
 <body>
     <div id="app" v-cloak>
         <form v-on:submit.prevent="showInfo">
-            <input type="text" placeholder="Enter Name">
-            <input type="email" placeholder="Enter Email">
-            <input type="number" placeholder="Enter Phone Number">
-            <label for="gender">Gender</label>
+            <input type="text" placeholder="Enter Name" v-model="inputName">
+            <input type="email" placeholder="Enter Email" v-model="inputEmail">
+            <input type="number" placeholder="Enter Phone Number" v-model="inputNumber">
+            <label for="gender" v-for="item in infoStore">{{ item.lgender }}</label>
             <select id="gender">
                 <option value="option" selected>Option</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="Male" v-model="item.inputGender">Male</option>
+                <option value="Female" v-model="item.inputGender">Female</option>
             </select>
+            <label v-for="item in infoStore">{{ item.limportant}}</label>
+            <input type="checkbox" v-model="important"><span>{{ check }}</span>
             <button type="submit">Submit</button>
         </form>
         <hr>
         <div class="show">
-            <h1 v-for="item in infoStore">{{ item.lname}}</h1>
-            <h1 v-for="item in infoStore">{{ item.lemail}} </h1>
+            <h1 v-for="item in infoStore">{{ item.lname}} {{ item.name }} <br> {{item.lemail}} {{ item.email}} <br> {{ item.lgender }} {{ item.gender }}</h1>
         </div>
     </div>
     <script src="app.js"></script>
