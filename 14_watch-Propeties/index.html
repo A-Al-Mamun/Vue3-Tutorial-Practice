@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 Form Practice | Create By A-Al-Mamun</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Vue 3 CDN Link -->
+    <script src="http://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <form>
+            <h1>Login Form</h1>
+            <div class="input-item">
+                <div class="inputLabel"><h2>{{ emailLabel }}</h2><h2>{{ passLabel }}</h2></div>
+                <div><h2>:</h2><h2>:</h2></div>
+                <div class="inputField"><input type="text" v-model="email" required><br><input type="password" v-model="passwordCheck" required><br>
+                <span>{{ checkText }}</span></div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
