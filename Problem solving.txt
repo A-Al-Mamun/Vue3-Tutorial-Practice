@@ -1,0 +1,13 @@
+https://answers.netlify.com/t/vuejs-website-wont-deploy-npm-run-dev-gives-error-build-command-failed/55370
+
+"scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "dev": "npm run serve",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run dev"
+ },
+
+
+
+then run : vue-cli-service serve --open
