@@ -1,8 +1,17 @@
 <template>
   <h1>{{ msg }}</h1>
-  <food-item />
-  <food-item />
-  <food-item />
+  <food-item 
+    food-name="Apple" 
+    food-descricption="This is red type Apple"
+    v-bind:is-favorite='true' />
+  <food-item 
+    food-name="Banana" 
+    food-descricption="This is yellow banana"
+    v-bind:is-favorite='false' />
+  <food-item 
+    food-name="Guava" 
+    food-descricption="This is red type Guava"
+    v-bind:is-favorite='false' />
 </template>
 
 <script>
@@ -32,5 +41,13 @@ h1{
   display: inline-block;
   margin: 10px;
   padding: 50px;
+}
+#app > div p{
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+img{
+  width: 30px;
 }
 </style>
